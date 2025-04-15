@@ -1,0 +1,19 @@
+FROM node:20-alpine
+
+# 设置工作目录
+WORKDIR /app
+
+# 设置pnpm store目录
+ENV PNPM_HOME="/app/.pnpm-store"
+
+# 安装pnpm
+RUN npm install -g pnpm
+
+# 设置为开发环境
+ENV NODE_ENV development
+
+# 暴露端口
+EXPOSE 3000
+
+# 启动命令将在docker-compose中定义
+CMD ["pnpm", "dev"]

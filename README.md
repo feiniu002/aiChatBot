@@ -1,6 +1,6 @@
 # aiChatBot
 
-## 本地部署教程:
+## 部署方式一：本地代码部署:
 
 ### 一、代码下载
 从github下载工程代码，路径为：https://github.com/feiniu002/aiChatBot
@@ -81,3 +81,33 @@ D:\GitHub\aiChatBot\frontend>pnpm dev
 
 ### 四、本地测试
 1. 访问http://localhost:3000进行测试
+
+
+
+## 部署方式二：docker容器部署教程
+
+### 一、代码下载
+从github下载工程代码，路径为：https://github.com/feiniu002/aiChatBot
+
+### 二、docker镜像build
+1. 命令行cd进入代码路径
+    例如我的是：cd D:\GitHub\aiChatBot
+2. build镜像
+```
+docker compose -f docker-compose.dev.yml build
+```
+
+### 三、docker镜像运行
+```
+docker compose -f docker-compose.dev.yml up
+或者后台运行：
+docker compose -f docker-compose.dev.yml up -d
+```
+
+### 四、本地测试
+1. 访问http://localhost:3000进行测试
+
+
+## 部署方式三：远端镜像托管拉取部署
+
+### 登录
